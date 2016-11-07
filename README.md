@@ -26,6 +26,10 @@ Trick words:
   - *"damage was due to the recent rain"* -> *"damage was caused by the recent rain"*.
 
 
+Use Oxford comma: *"...consisting of one, two***, and** *three elements."*
+
+
+
 ## Formulas
 Numbers, plus and minus signs etc. should be given in math mode using `$xxx$`.
 Units are given using the roman font; `$10^{10}~\mathrm{K}^{-1}$`.
