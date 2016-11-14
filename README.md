@@ -54,6 +54,56 @@ Check that axes are labeled using roman font, variables using italic and units a
 
 Own figures are referred using `Fig.~\ref{fig:blaa}` while others are `fig.~\ref{fig:blabla}`. Note the capitalization.
 
+## Tables
+
+Tables do not usually have vertical or horizontal lines (`\hline` in LaTeX). 
+
+Example for -2/-1/0/+1/+2 confidence limit array that is coupled with `multicolumn{}` to give nice titles for the subsections of the array.
+```
+\begin{table*}[!ht]
+\caption{Most probable values and $68\%$ and $95\%$ confidence limits
+  for the EoS parameters.}
+\centering
+\begin{footnotesize}
+  \begin{tabular}[c]{l c c c c c}
+    \hline
+    \hline
+  Quantity & $95\%$ lower limit & $68\%$ lower limit & Most probable value / median & $68\%$ upper limit & $95\%$ upper limit \\
+  \hline
+  \multicolumn{6}{c}{QMC parameters (with Model A)}\\
+  $\mathcal{S}$ (MeV) & 29.6 & 30.4 & 32.2 & 33.3 & 35.0 \\
+  $\mathcal{L}$ (MeV) & 32.1 & 42.1 & 54.9 & 67.7 & 69.4 \\
+  \hline
+  \multicolumn{6}{c}{Model A parameters}\\
+  $n_1$ & 0.36 & 0.45 & 0.55 & 0.66 & 0.68 \\
+  $\epsilon_1$ (MeV fm$^{-3}$) & 156 & 164 & 712 & 865 & 1020 \\
+  $n_2$ & 0.25 & 0.25 & 0.47 & 4.80 & 7.55 \\
+  $\epsilon_2$ (MeV fm$^{-3}$) & 531 & 794 & 1190 & 1510 & 1560 \\
+  $n_3$ & 0.95 & 0.99 & 1.41 & 6.80 & 7.76 \\
+  \hline
+  \hline
+  \multicolumn{6}{c}{QMC parameters (with Model C)}\\
+  $\mathcal{S}$ (MeV) & 29.7 & 30.4 & 31.8 & 33.6 & 35.2 \\
+  $\mathcal{L}$ (MeV) & 32.0 & 41.4 & 54.9 & 68.4 & 69.4 \\
+  \hline
+  \multicolumn{6}{c}{Model C parameters}\\
+  $\Delta P_1$ (MeV/fm$^{3}$) & 5.0 & 9.9 & 15 & 23 & 31 \\
+  $\Delta P_2$ (MeV/fm$^{3}$) & 59 & 122 & 176 & 194 & 195 \\
+  $\Delta P_3$ (MeV/fm$^{3}$) & 44 & 186 & 345 & 386 & 390 \\
+  $\Delta P_4$ (MeV/fm$^{3}$) & 12 & 26 & 199 & 372 & 385 \\
+  \hline
+ \end{tabular}
+\end{footnotesize}
+\label{tab:param_posteriors}
+\begin{center}
+  {\small{
+      Notes: For the $\mathcal{L}$ and $\Delta P_4$ parameters we give the median value of the flat distribution between the $1\sigma$ limits.
+}}
+   \end{center}
+\end{table*}
+```
+
+
 ## Article structure
 
 ### Introduction
