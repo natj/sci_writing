@@ -52,11 +52,13 @@ This means you have to play around a bit with LaTeX. Try using `[ht!]` (Here, To
 
 Check that axes are labeled using roman font, variables using italic and units again in roman; in python `r'Flux, $F$ (keV s$^{-1}$ cm$^{-2}$)'`
 
-Own figures are referred using `Fig.~\ref{fig:blaa}` while others are `fig.~\ref{fig:blabla}`. Note the capitalization.
+Own figures (presented in the article/thesis) are referred using `Fig.~\ref{fig:blaa}` while others (outside of the article/thesis) are cited as `fig.~\ref{fig:blabla}` in `\cite{ABC123}`. Note the capitalization.
 
 ## Tables
 
 Tables do not usually have vertical or horizontal lines (`\hline` in LaTeX). 
+
+Be consistent with the accuracy of your numbers, i.e., give same amount of significant digits for each number of each column.
 
 Example for -2/-1/0/+1/+2 confidence limit array that is coupled with `multicolumn{}` to give nice titles for the subsections of the array.
 ```
