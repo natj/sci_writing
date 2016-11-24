@@ -6,16 +6,30 @@
 
 Select either US or UK spelling.
 Selection does not matter much, (MNRAS wants UK, ApJ wants US; rest of the journals are fine with both).
-Just be consistent.
+Just be consistent. 
+
+Use Thesaurus.com to find more "scientific" synonyms.
+Avoid mundane words like "*huge*",...
+
+Use Oxford comma: *"...consisting of one, two***, and** *three elements."*
+
+Do not use contractions like *"won't"*, *"hasn't"*, etc. Scientific writing favors the full *"will not"*, *"has not"*,...
+
+
+### English grammar
+Check for correct spelling (using spelling software set to correct localization) for typical mistakes like
+- *disc* vs. *disk* 
+- *color* vs. *colour*
+
+Check for correct *a* vs. *an* usage: 
+- a paper
+- an example
 
 Check commas after glue words:
 - *However,*
 - *For example,*
 - *i.e.,* (US specific)
 - *On the other hand,*...
-
-Use Thesaurus.com to find more "scientific" synonyms.
-Avoid mundane words like "*huge*",...
 
 Check capitalization.
 Common words to capitalize:
@@ -24,10 +38,6 @@ Common words to capitalize:
 Trick words:
 - *"due to"* equals to *"caused by"*
   - *"damage was due to the recent rain"* -> *"damage was caused by the recent rain"*.
-
-
-Use Oxford comma: *"...consisting of one, two***, and** *three elements."*
-
 
 
 ## Formulas
@@ -49,6 +59,7 @@ where $F$ is the source flux, $I$ is the intensity,...
 ## Figures
 Figures should be given in the text on the same two pages that are physically open for the reader.
 This means you have to play around a bit with LaTeX. Try using `[ht!]` (Here, Top, !="*I really mean it, try harder latex!*").
+You might also have to copy/paste the figure code to different places in the .tex file to get it to correct position.
 
 Check that axes are labeled using roman font, variables using italic and units again in roman; in python `r'Flux, $F$ (keV s$^{-1}$ cm$^{-2}$)'`
 
@@ -56,11 +67,11 @@ Own figures (presented in the article/thesis) are referred using `Fig.~\ref{fig:
 
 ## Tables
 
-Tables do not usually have vertical or horizontal lines (`\hline` in LaTeX). 
+Tables do **not** usually have vertical or horizontal lines (`\hline` or `c |c` in LaTeX). 
 
 Be consistent with the accuracy of your numbers, i.e., give same amount of significant digits for each number of each column.
 
-Example for -2/-1/0/+1/+2 confidence limit array that is coupled with `multicolumn{}` to give nice titles for the subsections of the array.
+Example for -2/-1/0/+1/+2 confidence limit array that is coupled with `multicolumn{}` to give nice subtitles for different  subsections of the array.
 ```
 \begin{table*}[!ht]
 \caption{Most probable values and $68\%$ and $95\%$ confidence limits
@@ -116,7 +127,6 @@ Intros have a simple structure:
 * Description of how this article presents a solution to the gap
 * Summary of sections that are there 
    - *"First in Sect. 1 we introduce the method,...,Next in Sect. we apply the,...Results are presented in...,Finally, in Sect. X we summarize the work done."*
-
 
 
 ## LaTeX tricks
