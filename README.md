@@ -1,29 +1,62 @@
 # A bunch of scientific writing rules not explicitly stated anywhere
 ---
 
+Writing scientific texts like articles, thesis, etc. can be tricky if nobody ever told you some of the (often hidden) rules you need to follow. Here are some of them.
+
+English writing:
+* [Make sure your english spelling is consistent](#spelling)
+* [Use accurate words](#mundane-words)
+* [Avoid common pitfalls in english grammar](#english-grammar)
+
+LaTeX tips:
+* [Formulas](#formulas)
+* [Figures](#figures)
+* [Tables](#tables)
+* [Technical LaTeX tricks](#latex-tricks)
+
+Manuscript structure:
+* [Article structure](#article-structure)
+   * [Introduction](#introduction)
+
+Extra:
+* [More to read](#more-to-read)
+
+
+
+--------------------------------------------------
 
 ## Spelling
 
-Select either US or UK spelling.
-Selection does not matter much, (MNRAS wants UK, ApJ wants US; rest of the journals are fine with both).
-Just be consistent. 
+Most importantly, select either US or UK spelling.
+Selection does not matter much, (in astronomy/astrophysics MNRAS wants UK, ApJ wants US; rest of the journals are fine with both).
+Just be consistent with your selection. 
 
-Use Thesaurus.com to find more "scientific" synonyms.
-Avoid mundane words like "*huge*",...
-
-Use Oxford comma: *"...consisting of one, two***, and** *three elements."*
-
-Do not use contractions like *"won't"*, *"hasn't"*, etc. Scientific writing favors the full *"will not"*, *"has not"*,...
-
-
-### English grammar
 Check for correct spelling (using spelling software set to correct localization) for typical mistakes like
 - *disc* vs. *disk* 
 - *color* vs. *colour*
 
+
+## Mundane words
+
+Avoid mundane everyday words like "huge", "quite" etc. 
+Scientific writing should be accurate.
+Pick words carefully and check their definition, if needed.
+
+Use Thesaurus.com to find more "scientific" synonyms.
+Google "def: word" is also useful.
+
+Do not use contractions like *"won't"*, *"hasn't"*, etc. 
+Scientific writing favors the full *"will not"*, *"has not"*,... form.
+
+
+## English grammar
+
 Check for correct *a* vs. *an* usage: 
 - a paper
 - an example
+
+Make sure your punctuation is spot on.
+Use Oxford comma: e.g., *"...consisting of one, two, and *three elements."*
 
 Check commas after glue words:
 - *However,*
@@ -41,13 +74,14 @@ Trick words:
 
 
 ## Formulas
+
 Numbers, plus and minus signs etc. should be given in math mode using `$xxx$`.
-Units are given using the roman font; `$10^{10}~\mathrm{K}^{-1}$`.
+Units in math mode are given using the roman font; `$10^{10}~\mathrm{K}^{-1}$`.
 Note the tilde `~` separating digits and units.
 
 Variables are given in normal math mode and subscripts (that define/specialize the variable) with roman font; `$t_{\mathrm{start}}$`.
 
-Introduce any new variables and note the comma before *where*
+Introduce any new variables and note the comma before *where* at the end of the equation:
 ```
 ...given as
 \begin{equation}
@@ -57,13 +91,16 @@ where $F$ is the source flux, $I$ is the intensity,...
 ```
 
 ## Figures
+
 Figures should be given in the text on the same two pages that are physically open for the reader.
 This means you have to play around a bit with LaTeX. Try using `[ht!]` (Here, Top, !="*I really mean it, try harder latex!*").
 You might also have to copy/paste the figure code to different places in the .tex file to get it to correct position.
 
 Check that axes are labeled using roman font, variables using italic and units again in roman; in python `r'Flux, $F$ (keV s$^{-1}$ cm$^{-2}$)'`
 
-Own figures (presented in the article/thesis) are referred using `Fig.~\ref{fig:blaa}` while others (outside of the article/thesis) are cited as `fig.~\ref{fig:blabla}` in `\cite{ABC123}`. Note the capitalization.
+Own figures (presented in the article/thesis) are referred to using `Fig.~\ref{fig:blaa}` while others (outside of the article/thesis) are cited as `fig.~\ref{fig:blabla}` in `\cite{ABC123}`. 
+Note the capitalization.
+
 
 ## Tables
 
@@ -116,19 +153,6 @@ Example for -2/-1/0/+1/+2 confidence limit array that is coupled with `multicolu
 \end{table*}
 ```
 
-
-## Article structure
-
-### Introduction
-Intros have a simple structure:
-* Literature review and very general introduction
-* More specific intro to the problem in hand
-* Problem or a gap in the current knowledge
-* Description of how this article presents a solution to the gap
-* Summary of sections that are there 
-   - *"First in Sect. 1 we introduce the method,...,Next in Sect. we apply the,...Results are presented in...,Finally, in Sect. X we summarize the work done."*
-
-
 ## LaTeX tricks
 
 Do not use old TeX syntax with `{\rm blaa}` but instead the new `\textrm{ blaa}`. New syntax can have many styles embed unlike the old one.
@@ -156,6 +180,19 @@ And some common declerations:
 \newcommand{\Msun}{\ensuremath{\mathrm{M}_{\sun}}}
 ```
 This gives you also the useful `\red{blaa}` coloring for higlighting questions to co-authors.
+
+## Article structure
+
+### Introduction
+
+Article introductions have a simple structure:
+* Literature review and very general introduction
+* More specific intro to the problem in hand
+* Problem or a gap in the current knowledge
+* Description of how this article presents a solution to the gap
+* Summary of sections that are there 
+   - *"First in Sect. 1 we introduce the method,...,Next in Sect. we apply the,...Results are presented in...,Finally, in Sect. X we summarize the work done."*
+
 
 
 ## More to read
