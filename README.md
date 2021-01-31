@@ -3,20 +3,39 @@
 
 Writing scientific texts like articles, thesis, etc. can be tricky if nobody ever told you some of the (often hidden) rules you need to follow. Here are some of them.
 
-English writing:
-* [Make sure your english spelling is consistent](#spelling)
-* [Use accurate words](#mundane-words)
-* [Avoid common pitfalls in english grammar](#english-grammar)
 
-LaTeX tips:
+English grammar:
+* [Make sure your english spelling is consistent](#spelling)
+    - [ ] use consistent spelling of words
+* [Use accurate words](#mundane-words)
+    - [ ] avoid mundane words
+    - [ ] do not use contractions (won't, hasn't,...)
+* [Avoid common pitfalls in english grammar](#english-grammar)
+    - [ ] check articles (a/an/the)
+    - [ ] use Oxforx comma in lists
+    - [ ] add comma after glue words (However, ...)
+
+Technical LaTeX tips:
 * [Formulas](#formulas)
+    - [ ] use math mode for (most) numbers ($1$)
+    - [ ] use roman font for units inside math mode ($10 \mathrm{K}$)
+    - [ ] use roman font for (most) subscripts ($t_{\mathrm{start}}$)
+    - [ ] check that equations connect to the sentence, including proper punctuation 
 * [Figures](#figures)
+    - [ ] refer to your own figures as Fig.~\ref{label} or Figure.~\ref{label} 
+    - [ ] make sure figures appear close to where they are described in the compiled text
 * [Tables](#tables)
+    - [ ] do not overuse vertical or horizontal lines
+    - [ ] use the same number of significant digits when listing numbers
 * [Technical LaTeX tricks](#latex-tricks)
+    - [ ] do not use the old `{\rm xxx}` syntax but favor the new `\textrm{xxx}`
 
 Manuscript structure:
 * [Article structure](#article-structure)
-   * [Introduction](#introduction)
+    * [Introduction](#introduction)
+        - [ ] cite (relevant) previous literature
+        - [ ] introduce the problem or gap in the knowledge 
+        - [ ] describe how this particular work adddresses that gap
 
 Extra:
 * [More to read](#more-to-read)
